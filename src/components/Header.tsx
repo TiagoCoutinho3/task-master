@@ -1,26 +1,26 @@
-import { IconBell, IconSearch, IconSettings, IconSparkles } from './icons'
+import { IconBell, IconSearch, IconSettings } from "./icons";
 
 type HeaderProps = {
-  search: string
-  onSearchChange: (value: string) => void
-}
+  search: string;
+  onSearchChange: (value: string) => void;
+};
 
 export function Header({ search, onSearchChange }: HeaderProps) {
   return (
     <header className="flex h-16 shrink-0 items-center gap-4 border-b border-border-subtle bg-charcoal/95 px-4 backdrop-blur-sm md:px-6">
-      <div className="flex min-w-0 flex-1 items-center justify-start gap-2">
-        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-accent-muted text-accent">
-          <IconSparkles className="h-5 w-5" aria-hidden />
+      <div className="flex min-w-0 flex-1 items-center justify-start gap-3">
+        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl border border-accent/20 bg-accent/10 text-accent font-semibold tracking-tight">
+          TC
         </span>
         <div className="min-w-0">
           <span className="block truncate text-base font-semibold tracking-tight text-white md:text-lg">
-            Task Master{' '}
-            <span className="bg-gradient-to-r from-accent to-teal bg-clip-text text-transparent">
-              Pro
+            Task {" "}
+            <span className="bg-gradient-to-r from-accent to-accent/80 bg-clip-text text-transparent">
+              Master
             </span>
           </span>
           <span className="hidden text-xs text-muted sm:block">
-            Ship faster. Stay focused.
+            Organize suas tarefas de forma eficiente e produtiva
           </span>
         </div>
       </div>
@@ -34,7 +34,7 @@ export function Header({ search, onSearchChange }: HeaderProps) {
             type="search"
             value={search}
             onChange={(e) => onSearchChange(e.target.value)}
-            placeholder="Search tasks..."
+            placeholder="Pesquisar tarefas..."
             className="h-10 w-full rounded-lg border border-border-subtle bg-elevated py-2 pl-10 pr-3 text-sm text-slate-100 placeholder:text-muted outline-none transition-[box-shadow,border-color] focus:border-accent focus:ring-2 focus:ring-accent/25"
           />
         </label>
@@ -49,10 +49,10 @@ export function Header({ search, onSearchChange }: HeaderProps) {
           <IconBell aria-hidden />
         </button>
         <span
-          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-border-subtle bg-gradient-to-br from-accent/30 to-teal/20 text-xs font-bold text-white ring-2 ring-charcoal"
+          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-border-subtle bg-gradient-to-br from-accent/30 to-accent/10 text-xs font-bold text-accent ring-2 ring-charcoal"
           title="Profile"
         >
-          TM
+          TC
         </span>
         <button
           type="button"
@@ -63,5 +63,5 @@ export function Header({ search, onSearchChange }: HeaderProps) {
         </button>
       </div>
     </header>
-  )
+  );
 }

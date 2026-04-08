@@ -1,4 +1,4 @@
-import type { SVGProps } from 'react'
+﻿import type { SVGProps } from 'react'
 
 type IconProps = SVGProps<SVGSVGElement>
 
@@ -16,11 +16,11 @@ export function IconSparkles({ className, ...rest }: IconProps) {
       strokeLinejoin="round"
       {...rest}
     >
-      <path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z" />
-      <path d="M5 3v4" />
-      <path d="M19 17v4" />
-      <path d="M3 5h4" />
-      <path d="M17 19h4" />
+      <path d="M12.5 3 11 8.6 5 10.1 10 13.8 9 19 13.5 15.8 19 17 15 12 19 7.5 13.5 8.8 12.5 3Z" />
+      <path d="M5 4.5 4 7" />
+      <path d="M20 15.5 18.5 17" />
+      <path d="M3.5 13.5 6 14" />
+      <path d="M17.5 4.5 18.5 7" />
     </svg>
   )
 }
@@ -39,8 +39,8 @@ export function IconInbox({ className, ...rest }: IconProps) {
       strokeLinejoin="round"
       {...rest}
     >
-      <path d="M22 12h-6l-2 3h-4l-2-3H2" />
-      <path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z" />
+      <path d="M4 7.5 2.5 12v5.5a1 1 0 0 0 1 1H20.5a1 1 0 0 0 1-1V12L20 7.5" />
+      <path d="M7 7.5h10l-2 3.5H9l-2-3.5Z" />
     </svg>
   )
 }
@@ -59,10 +59,10 @@ export function IconCalendar({ className, ...rest }: IconProps) {
       strokeLinejoin="round"
       {...rest}
     >
-      <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
-      <line x1="16" y1="2" x2="16" y2="6" />
-      <line x1="8" y1="2" x2="8" y2="6" />
-      <line x1="3" y1="10" x2="21" y2="10" />
+      <path d="M5 7.5c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H7c-1.1 0-2-.9-2-2V7.5Z" />
+      <path d="M7 4.5v3" />
+      <path d="M17 4.5v3" />
+      <path d="M5 10.5h14" />
     </svg>
   )
 }
@@ -81,17 +81,20 @@ export function IconCalendarClock({ className, ...rest }: IconProps) {
       strokeLinejoin="round"
       {...rest}
     >
-      <path d="M21 7.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h3.5" />
-      <path d="M16 2v4" />
-      <path d="M8 2v4" />
-      <path d="M3 10h5" />
-      <path d="M17.5 17.5 16 16.25V14" />
-      <circle cx="16" cy="16" r="6" />
+      <path d="M5 7.5c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H7c-1.1 0-2-.9-2-2V7.5Z" />
+      <path d="M7 4.5v3" />
+      <path d="M17 4.5v3" />
+      <path d="M5 10.5h14" />
+      <circle cx="16" cy="16" r="4" />
+      <path d="M16 13.5v2.5" />
+      <path d="M16 16h2" />
     </svg>
   )
 }
 
 export function IconCheckCircle({ className, ...rest }: IconProps) {
+  const maskId = `mask-check-${Math.random().toString(36).slice(2, 8)}`
+
   return (
     <svg
       className={className}
@@ -105,8 +108,14 @@ export function IconCheckCircle({ className, ...rest }: IconProps) {
       strokeLinejoin="round"
       {...rest}
     >
-      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-      <polyline points="22 4 12 14.01 9 11.01" />
+      <defs>
+        <mask id={maskId}>
+          <rect width="24" height="24" fill="white" />
+          <path d="M7.5 12.5 10.5 15.5 16.5 9.5" fill="black" stroke="none" />
+        </mask>
+      </defs>
+      <circle cx="12" cy="12" r="10" fill="currentColor" mask={`url(#${maskId})`} />
+      <circle cx="12" cy="12" r="10" fill="none" />
     </svg>
   )
 }
@@ -125,8 +134,8 @@ export function IconSearch({ className, ...rest }: IconProps) {
       strokeLinejoin="round"
       {...rest}
     >
-      <circle cx="11" cy="11" r="8" />
-      <path d="m21 21-4.3-4.3" />
+      <circle cx="11" cy="11" r="7" />
+      <path d="m18.5 18.5-4-4" />
     </svg>
   )
 }
@@ -145,8 +154,8 @@ export function IconBell({ className, ...rest }: IconProps) {
       strokeLinejoin="round"
       {...rest}
     >
-      <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
-      <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
+      <path d="M6 8c0-3 1-5 6-5s6 2 6 5c0 6 2 8 2 8H4s2-2 2-8Z" />
+      <path d="M10 21a2 2 0 0 0 4 0" />
     </svg>
   )
 }
@@ -165,8 +174,13 @@ export function IconSettings({ className, ...rest }: IconProps) {
       strokeLinejoin="round"
       {...rest}
     >
-      <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" />
       <circle cx="12" cy="12" r="3" />
+      <path d="M19 11.5 21 11 19 10.5" />
+      <path d="M5 11.5 3 11 5 10.5" />
+      <path d="M12 5 12 3" />
+      <path d="M12 21 12 19" />
+      <path d="M17.5 18.5 16 17" />
+      <path d="M6.5 6.5 8 5" />
     </svg>
   )
 }
@@ -185,7 +199,7 @@ export function IconZap({ className, ...rest }: IconProps) {
       strokeLinejoin="round"
       {...rest}
     >
-      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+      <path d="M13 2 7.5 13h4.5l-1 9 7.5-10.5H13l1-9Z" />
     </svg>
   )
 }
@@ -204,8 +218,7 @@ export function IconFlag({ className, ...rest }: IconProps) {
       strokeLinejoin="round"
       {...rest}
     >
-      <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" />
-      <line x1="4" y1="22" x2="4" y2="15" />
+      <path d="M4 22V6c3-1 4-1 7 0s4 1 7 0v10c-3 1-4 1-7 0s-4-1-7 0" />
     </svg>
   )
 }
@@ -224,11 +237,10 @@ export function IconCoffee({ className, ...rest }: IconProps) {
       strokeLinejoin="round"
       {...rest}
     >
-      <path d="M17 8h1a4 4 0 1 1 0 8h-1" />
-      <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z" />
-      <line x1="6" y1="2" x2="6" y2="4" />
-      <line x1="10" y1="2" x2="10" y2="4" />
-      <line x1="14" y1="2" x2="14" y2="4" />
+      <path d="M18 8h1a3 3 0 0 1 0 6h-1" />
+      <path d="M5 8h11v8a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V8Z" />
+      <path d="M7 4v4" />
+      <path d="M11 4v4" />
     </svg>
   )
 }
@@ -249,7 +261,7 @@ export function IconStar({ className, filled, ...rest }: StarProps) {
       strokeLinejoin="round"
       {...rest}
     >
-      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+      <path d="M12 3.5 14.2 9.5 20.5 10.3 15.5 14.5 16.8 20.6 12 17.5 7.2 20.6 8.5 14.5 3.5 10.3 9.8 9.5 12 3.5Z" />
     </svg>
   )
 }
@@ -268,10 +280,10 @@ export function IconClipboard({ className, ...rest }: IconProps) {
       strokeLinejoin="round"
       {...rest}
     >
-      <rect x="8" y="2" width="8" height="4" rx="1" ry="1" />
-      <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
-      <path d="M9 12h6" />
-      <path d="M9 16h6" />
+      <path d="M8 3.5h8c.6 0 1 .4 1 1v1.5H7V4.5c0-.6.4-1 1-1Z" />
+      <path d="M6 5.5h12c.6 0 1 .4 1 1v13c0 .6-.4 1-1 1H6c-.6 0-1-.4-1-1v-13c0-.6.4-1 1-1Z" />
+      <path d="M9 11h6" />
+      <path d="M9 15h6" />
     </svg>
   )
 }
@@ -291,8 +303,8 @@ export function IconTarget({ className, ...rest }: IconProps) {
       {...rest}
     >
       <circle cx="12" cy="12" r="10" />
-      <circle cx="12" cy="12" r="6" />
-      <circle cx="12" cy="12" r="2" />
+      <circle cx="12.5" cy="11.8" r="6" />
+      <circle cx="11.5" cy="11.5" r="2" />
     </svg>
   )
 }
@@ -311,8 +323,8 @@ export function IconPencil({ className, ...rest }: IconProps) {
       strokeLinejoin="round"
       {...rest}
     >
-      <path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z" />
-      <path d="m15 5 4 4" />
+      <path d="M7 19 4 20l1-3 9-9 3 3-9 9Z" />
+      <path d="M14 6 18 10" />
     </svg>
   )
 }
