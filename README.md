@@ -16,9 +16,3 @@ Uma aplicação de gerenciamento de tarefas moderna, focada em alta performance 
 - [x] **CRUD de Tarefas**: Adição, conclusão e exclusão de itens.
 - [x] **Persistência Local**: Suas tarefas ficam salvas no navegador (LocalStorage).
 - [x] **Responsividade**: Totalmente adaptado para mobile e desktop.
-
-## 🚀 Como rodar o projeto
-
-1. Clone o repositório:
-   ```bash
-   git clone [https://github.com/seu-usuario/task-master.git](https://github.com/TiagoCoutinho3/task-master.git)
