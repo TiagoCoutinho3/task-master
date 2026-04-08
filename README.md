@@ -1,17 +1,24 @@
-# Task Master
+# 🚀 Task Master Pro
 
-Base limpa em React + TypeScript + Vite, pronta para iniciar o projeto.
+Uma aplicação de gerenciamento de tarefas moderna, focada em alta performance e produtividade. Este projeto foi desenvolvido para consolidar conhecimentos em ecossistema React e estilização avançada com Tailwind CSS.
 
-## Como rodar
+## 🛠️ Tecnologias Utilizadas
 
-```bash
-npm install
-npm run dev
-```
+- **React 19**: Biblioteca principal para interfaces reativas.
+- **Vite**: Ferramenta de build de última geração.
+- **TypeScript**: Tipagem estática para código robusto.
+- **Tailwind CSS v4**: Estilização moderna e ultra-rápida.
+- **Lucide React**: Ícones minimalistas e elegantes.
 
-## Scripts
+## 📋 Funcionalidades
 
-- `npm run dev`: inicia o ambiente de desenvolvimento
-- `npm run build`: gera build de producao
-- `npm run preview`: visualiza o build localmente
-- `npm run lint`: executa o ESLint
+- [x] **Interface Dark Mode**: Design focado na experiência do desenvolvedor.
+- [x] **CRUD de Tarefas**: Adição, conclusão e exclusão de itens.
+- [x] **Persistência Local**: Suas tarefas ficam salvas no navegador (LocalStorage).
+- [x] **Responsividade**: Totalmente adaptado para mobile e desktop.
+
+## 🚀 Como rodar o projeto
+
+1. Clone o repositório:
+   ```bash
+   git clone [https://github.com/seu-usuario/task-master.git](https://github.com/TiagoCoutinho3/task-master.git)
