@@ -54,13 +54,7 @@ export function Header({ search, onSearchChange }: HeaderProps) {
         >
           TC
         </span>
-        <button
-          type="button"
-          aria-label="Settings"
-          className="flex h-10 w-10 items-center justify-center rounded-lg border border-transparent text-muted transition-colors hover:border-border-subtle hover:bg-elevated hover:text-slate-200"
-        >
-          <IconSettings aria-hidden />
-        </button>
+  
       </div>
     </header>
   );
