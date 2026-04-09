@@ -2,6 +2,8 @@
 
 Uma aplicação de gerenciamento de tarefas moderna, focada em alta performance e produtividade. Este projeto foi desenvolvido para consolidar conhecimentos em ecossistema React e estilização avançada com Tailwind CSS.
 
+Acesse a aplicação aqui: https://tc-task-master.vercel.app/
+
 ## 🛠️ Tecnologias Utilizadas
 
 - **React 19**: Biblioteca principal para interfaces reativas.
@@ -16,3 +18,5 @@ Uma aplicação de gerenciamento de tarefas moderna, focada em alta performance 
 - [x] **CRUD de Tarefas**: Adição, conclusão e exclusão de itens.
 - [x] **Persistência Local**: Suas tarefas ficam salvas no navegador (LocalStorage).
 - [x] **Responsividade**: Totalmente adaptado para mobile e desktop.
+- [x] Organização de tarefas por prioridade e datas.
+- [x] Layout responsivo e intuitivo.
