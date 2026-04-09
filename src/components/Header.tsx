@@ -1,4 +1,4 @@
-import { IconBell, IconSearch, IconSettings } from "./icons";
+import { IconBell, IconSearch } from "./icons";
 
 type HeaderProps = {
   search: string;
