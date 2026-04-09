@@ -14,7 +14,7 @@ function messageFor(filter: TaskFilter, hasSearch: boolean): string {
     case "upcoming":
       return "Sem tarefas futuras. Defina uma data para ver aqui.";
     case "completed":
-      return "Ainda nao ha tarefas concluidas.";
+      return "Ainda não há tarefas concluídas.";
     default:
       return "Comece criando sua primeira tarefa acima.";
   }

@@ -27,7 +27,7 @@ const PRI_META: Record<
     className: "border-rose-500/40 bg-rose-500/10 text-rose-300",
   },
   medium: {
-    label: "Media",
+    label: "Média",
     Icon: IconFlag,
     className: "border-accent/40 bg-accent-muted text-accent",
   },
@@ -81,7 +81,7 @@ export function TaskItem({ task, onToggle, onPatch, onDelete }: TaskItemProps) {
         type="button"
         role="checkbox"
         aria-checked={task.completed}
-        aria-label={task.completed ? "Marcar incompleta" : "Marcar concluida"}
+        aria-label={task.completed ? "Marcar incompleta" : "Marcar concluída"}
         onClick={() => onToggle(task.id)}
         className={`flex h-5 w-5 shrink-0 items-center justify-center rounded-full border-2 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent ${
           task.completed

@@ -50,9 +50,9 @@ export function searchTasks(tasks: Task[], query: string): Task[] {
 }
 
 export function formatDueLabel(iso: string | null): string {
-  if (!iso) return 'No date'
+  if (!iso) return 'Sem data'
   const d = new Date(iso)
-  if (Number.isNaN(d.getTime())) return 'No date'
+  if (Number.isNaN(d.getTime())) return 'Sem data'
   return new Intl.DateTimeFormat(undefined, {
     month: 'short',
     day: 'numeric',

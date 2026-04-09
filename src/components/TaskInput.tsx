@@ -5,7 +5,7 @@ import { IconCoffee, IconFlag, IconPlus, IconZap } from "./icons";
 const PRIORITIES: { id: TaskPriority; label: string; Icon: typeof IconZap }[] =
   [
     { id: "high", label: "Alta", Icon: IconZap },
-    { id: "medium", label: "Media", Icon: IconFlag },
+    { id: "medium", label: "Média", Icon: IconFlag },
     { id: "low", label: "Baixa", Icon: IconCoffee },
   ];
 

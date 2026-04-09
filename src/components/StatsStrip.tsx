@@ -24,7 +24,7 @@ export function StatsStrip({ tasks }: StatsStripProps) {
               Progresso
             </p>
             <p className="text-lg font-semibold text-white font-mono">
-              {pct}% Concluídas
+              {pct}% {done === 1 ? 'Concluída' : 'Concluídas'}
             </p>
           </div>
         </div>
@@ -36,18 +36,18 @@ export function StatsStrip({ tasks }: StatsStripProps) {
           <span className="flex items-center gap-1.5 text-slate-200">
             <IconZap className="h-4 w-4 text-slate-100" aria-hidden />
             <span className="tabular-nums font-medium font-mono">{active}</span>
-            <span className="text-slate-400">Sem concluir</span>
+            <span className="text-slate-400">{active === 1 ? 'tarefa sem concluir' : 'tarefas sem concluir'}</span>
           </span>
           <span className="flex items-center gap-1.5 text-slate-200">
             <IconCheckCircle className="h-4 w-4 text-accent" aria-hidden />
             <span className="tabular-nums font-medium font-mono">{done}</span>
-            <span className="text-slate-400">Concluídas</span>
+            <span className="text-slate-400">{done === 1 ? 'tarefa concluída' : 'tarefas concluídas'}</span>
           </span>
           {starred > 0 && (
             <span className="flex items-center gap-1.5 text-amber">
               <span className="text-xs font-semibold">★</span>
               <span className="tabular-nums font-medium">{starred}</span>
-              <span className="text-muted">marcadas</span>
+              <span className="text-muted">{starred === 1 ? 'marcada' : 'marcadas'}</span>
             </span>
           )}
         </div>
