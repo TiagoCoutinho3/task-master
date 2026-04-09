@@ -22,7 +22,7 @@ function messageFor(filter: TaskFilter, hasSearch: boolean): string {
 
 export function EmptyState({ filter, hasSearch }: EmptyStateProps) {
   return (
-    <div className="flex flex-col items-center justify-center gap-4 rounded-3xl border border-dashed border-border-subtle bg-slate-950/55 px-4 py-16 text-center">
+    <div className="flex flex-col items-center justify-center gap-4 rounded-3xl border border-dashed border-border-subtle bg-elevated/55 px-4 py-16 text-center">
       <span className="rounded-3xl border border-border-subtle bg-accent-muted p-6 text-accent">
         <IconClipboard className="text-accent" aria-hidden />
       </span>

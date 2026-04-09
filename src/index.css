@@ -1,11 +1,10 @@
-
 @theme {
-  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
-  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
-  --color-charcoal: #020617;
-  --color-elevated: #0f172a;
-  --color-elevated-hover: #1e293b;
-  --color-accent: #34d399; 
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --color-charcoal: #1a1a1a;
+  --color-elevated: #2d2d2d;
+  --color-elevated-hover: #3a3a3a;
+  --color-accent: #34d399;
   --color-accent-hover: #10b981;
   --color-accent-muted: rgba(52, 211, 153, 0.15);
   --color-border-subtle: rgba(148, 163, 184, 0.1);
@@ -31,7 +30,7 @@ body {
   font-family: var(--font-sans);
   background:
     radial-gradient(circle at top, rgba(52, 211, 153, 0.08), transparent 18%),
-    #020617;
+    #1a1a1a;
   color: #f8fafc;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
