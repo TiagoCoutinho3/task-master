@@ -26,9 +26,6 @@ type SidebarProps = {
 export function Sidebar({ active, onChange, counts }: SidebarProps) {
   return (
     <aside className="flex w-full shrink-0 flex-col gap-2 border-b border-border-subtle bg-charcoal p-4 md:w-60 md:border-b-0 md:border-r">
-      <p className="mb-1 hidden px-2 text-xs font-medium uppercase tracking-wider text-muted md:block">
-        Views
-      </p>
       <nav className="flex flex-row gap-2 overflow-x-auto pb-1 md:flex-col md:overflow-visible md:pb-0">
         {NAV.map(({ id, label, Icon }) => {
           const isActive = active === id;

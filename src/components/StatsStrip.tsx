@@ -47,7 +47,7 @@ export function StatsStrip({ tasks }: StatsStripProps) {
             <span className="flex items-center gap-1.5 text-amber">
               <span className="text-xs font-semibold">★</span>
               <span className="tabular-nums font-medium">{starred}</span>
-              <span className="text-muted">pinned</span>
+              <span className="text-muted">marcadas</span>
             </span>
           )}
         </div>

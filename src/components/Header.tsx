@@ -8,10 +8,7 @@ type HeaderProps = {
 export function Header({ search, onSearchChange }: HeaderProps) {
   return (
     <header className="flex h-16 shrink-0 items-center gap-4 border-b border-border-subtle bg-charcoal/95 px-4 backdrop-blur-sm md:px-6">
-      <div className="flex min-w-0 flex-1 items-center justify-start gap-3">
-        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl border border-accent/20 bg-accent/10 text-accent font-semibold tracking-tight">
-          TC
-        </span>
+      <div className="flex min-w-0 flex-1 items-center justify-start gap-3">   
         <div className="min-w-0">
           <span className="block truncate text-base font-semibold tracking-tight text-white md:text-lg">
             Task {" "}
